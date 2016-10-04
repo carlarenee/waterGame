@@ -1,0 +1,14 @@
+#box {
+  width: 1000px;
+  height: 800px;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+
+#target {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: black;
+}
+
