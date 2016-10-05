@@ -1,14 +1,30 @@
 #box {
   width: 1000px;
   height: 800px;
+  background-image: url(assets/Ocean.gif);
+  background-size: cover;
   border: 2px solid black;
   margin: 0 auto;
+  display: flex;
+  position: relative;
 }
 
-#target {
+#monster2 {
   height: 100px;
   width: 100px;
   border-radius: 50px;
   background-color: black;
+  left: 0px;
+  top: 80px;
+  position: absolute;
+}
+
+#monster1 {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  background-color: red;
+  left: 0px;
+  position: absolute;
 }
 
