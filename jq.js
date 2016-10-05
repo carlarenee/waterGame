@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+//getting input from page 1 into page 2
+var url = window.location.search.substring(1);
+var retrieve = url.split('&');
+console.log(retrieve);
+var name = retrieve[0].split('=');
+$('#playerName').append(name[1]);
+console.log(name);
+
 var start = $('#start');
 // Turn cursor into weapon when hovering over a div
 var wholePage = $('body');
@@ -10,6 +18,8 @@ var crossHair = function () {
 var mon1 = $('#monster1');
 var badGuy = $('.badGuys')
 //functions
+
+
 var swimMonsterLeft = function() {
   var distance = 1000;
   setInterval(function() {
@@ -32,7 +42,7 @@ var blowup = function() {
 wholePage.hover(crossHair);
 start.click(swimMonsterLeft);
 mon1.click(blowup);
-$('#monster2')click(blowup);
+
 
 });
 
