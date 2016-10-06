@@ -2,15 +2,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Permanent Marker', cursive;
-
+  background-image: url(assets/oceanfloor.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
   color: white;
+  font-size: 3em;
 }
 
 h2 {
   color: white;
+}
+
+header {
+  text-align: center;
 }
 
 #box {
@@ -63,6 +70,16 @@ h2 {
   position: absolute;
 }
 
+#friend {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: pink;
+  left: 0px;
+  top: 90px;
+  position: absolute;
+}
+
 #infobox {
   text-align: center;
   margin: 0 auto;
@@ -73,6 +90,7 @@ h2 {
 }
 
 .info {
+  color: white;
   width: 300px;
   height: 80px;
   margin: 10px;

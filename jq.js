@@ -22,6 +22,7 @@ var mon1 = $('#monster1');
 var mon2 = $('#monster2');
 var mon3 = $('#monster3');
 var mon4 = $('#monster4');
+var friend = $('#friend');
 var badGuy = $('.badGuys');
 
 // movement functions
@@ -75,10 +76,23 @@ var swim4 = function() {
   }, 15);
 };
 
+var swimfriend = function() {
+  var distance = 0;
+  setInterval(function() {
+    friend.css('left', distance + 'px');
+    if (distance > 920) {
+      distance = 0;
+    } else {
+      distance += 5;
+    }
+  }, 30);
+};
+
 
 // shoot functions
 var blowup = function() {
   $(this).css('background-color', 'white');
+
 }
 
 // Timer
@@ -98,26 +112,31 @@ var countDown = function() {
 // adding and subtracting points
 var $showScore = $('#playerScore');
 var $score = 0;
+// if player hits monster 1, add 3 points
 var hitMon1 = function() {
   $score +=3;
   $showScore.text($score + " points");
 }
-
+// if player hits monster 1, add 2 points
 var hitMon2 = function() {
   $score +=2;
   $showScore.text($score + " points");
 }
-
+// if player hits monster 1, add 1 points
 var hitMon3 = function() {
   $score +=1;
   $showScore.text($score + " points");
 }
-
+// if player hits monster 1, add 4 points
 var hitMon4 = function() {
   $score +=4;
   $showScore.text($score + " points");
 }
-
+// if player hits friend, subract 3 points
+var hitfriend = function() {
+  $score -=3;
+  $showScore.text($score + " points");
+}
 
 // event listeners
 //wholePage.hover(crossHair);
@@ -125,6 +144,7 @@ start.click(swim1);
 start.click(swim2);
 start.click(swim3);
 start.click(swim4);
+start.click(swimfriend);
 mon1.click(blowup);
 mon1.click(hitMon1);
 mon2.click(blowup);
@@ -133,8 +153,9 @@ mon3.click(blowup);
 mon3.click(hitMon3);
 mon4.click(blowup);
 mon4.click(hitMon4);
+friend.click(blowup);
+friend.click(hitfriend);
 start.click(countDown);
-
 });
 
 
