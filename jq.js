@@ -17,6 +17,7 @@ var crossHair = function () {
   };
 
 // variables
+var score = 0;
 var mon1 = $('#monster1');
 var mon2 = $('#monster2');
 var mon3 = $('#monster3');
@@ -47,7 +48,7 @@ var swim2 = function() {
     } else {
       distance += 5;
     }
-  }, 20);
+  }, 30);
 };
 
 var swim3 = function() {
@@ -59,7 +60,7 @@ var swim3 = function() {
     } else {
       distance -= 5;
     }
-  }, 10);
+  }, 20);
 };
 
 var swim4 = function() {
@@ -71,7 +72,7 @@ var swim4 = function() {
     } else {
       distance += 10;
     }
-  }, 10);
+  }, 15);
 };
 
 
@@ -81,21 +82,41 @@ var blowup = function() {
 }
 
 // Timer
-var $seconds = 30;
+var $seconds = 20;
 var $display = $('#playerTime')
-setInterval(function(){ countDown }, 1000);
-
 var countDown = function() {
+  setInterval(function(){
   $seconds--;
-  if ($seconds === 0) {
-    clearInterval(countDown);
+  if ($seconds < 0) {
+    clearInterval();
+    return;
   }
   $display.text($seconds + " seconds");
+  }, 1000);
 }
 
+// adding and subtracting points
+var $showScore = $('#playerScore');
+var $score = 0;
+var hitMon1 = function() {
+  $score +=3;
+  $showScore.text($score + " points");
+}
 
+var hitMon2 = function() {
+  $score +=2;
+  $showScore.text($score + " points");
+}
 
+var hitMon3 = function() {
+  $score +=1;
+  $showScore.text($score + " points");
+}
 
+var hitMon4 = function() {
+  $score +=4;
+  $showScore.text($score + " points");
+}
 
 
 // event listeners
@@ -105,7 +126,13 @@ start.click(swim2);
 start.click(swim3);
 start.click(swim4);
 mon1.click(blowup);
+mon1.click(hitMon1);
 mon2.click(blowup);
+mon2.click(hitMon2);
+mon3.click(blowup);
+mon3.click(hitMon3);
+mon4.click(blowup);
+mon4.click(hitMon4);
 start.click(countDown);
 
 });
