@@ -1,6 +1,6 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
-//getting input from page 1 into page 2
+// //getting input from page 1 into page 2
 // var url = window.location.search.substring(1);
 // var retrieve = url.split('&');
 // console.log(retrieve);
@@ -8,96 +8,49 @@ $(document).ready(function() {
 // $('#playerName').append(name[1]);
 // console.log(name);
 
-var start = $('#start');
+// var start = $('#start');
 
-// Turn cursor into weapon when hovering over a div
+// // Turn cursor into weapon when hovering over a div
 // var wholePage = $('body');
 // var crossHair = function () {
 //     wholePage.css( 'cursor' , 'url(assets/pow.png), crossHair');
 //   };
 
-// variables
+// // variables
 // var score = 0;
-var mon1 = $('#monster1');
-var mon2 = $('#monster2');
-var mon3 = $('#monster3');
-var mon4 = $('#monster4');
-var friend = $('#friend');
+// var mon1 = $('#monster1');
+// var mon2 = $('#monster2');
+// var mon3 = $('#monster3');
+// var mon4 = $('#monster4');
+// var friend = $('#friend');
 // var badGuy = $('.badGuys');
-//var rightfish = [mon1, mon3];
-//var leftfish = [mon2, mon4, friend];
-// movement functions
-// swim from right to left
 
-var speed = Math.floor(Math.random() * 30) + 20;
+// // movement functions
+// // monster to swim from right to left
+// var swim1 = function() {
+//   var distance = 920;
+//   setInterval(function() {
+//     mon1.css('left', distance + 'px');
+//     if (distance < 0) {
+//       distance = 920;
+//     } else {
+//       distance -= 5;
+//     }
+//   }, 40);
+// };
 
-var swim1 = function() {
-
-  setInterval(function() {
-
-  //var rightfish = [mon1, mon3, mon2, mon4, friend];
-
-
-  // for (var i = 0; i <= rightfish.length; i++) {
-  //   rightfish[i].css('left', distance + 'px');
-
-    $('.right').each(function() {
-
-        var distance = 920;
-        if (distance < 0) {
-          distance = 920;
-        } else {
-        distance -= 5;
-        };
-        $(this).css('left', distance + 'px');
-
-    swim1 }, speed);
-  }
-  )
-  };
-
-
-  var swim2 = function() {
-
-  setInterval(function() {
-
-  //var rightfish = [mon1, mon3, mon2, mon4, friend];
-
-
-  // for (var i = 0; i <= rightfish.length; i++) {
-  //   rightfish[i].css('left', distance + 'px');
-
-    $('.left').each(function() {
-
-        var distance = 920;
-        if (distance < 0) {
-          distance = 920;
-        } else {
-        distance += 5;
-        };
-        $(this).css('left', distance + 'px');
-
-    swim2 }, speed);
-  }
-  )
-  };
-
-
-
-// swim left to right
+// // monster to swim left to right
 // var swim2 = function() {
-//   var left = $('.left');
-//   var speed = Math.floor(Math.random() * 30) + 30;
 //   var distance = 0;
 //   setInterval(function() {
-//     left.css('left', distance + 'px');
+//     mon2.css('left', distance + 'px');
 //     if (distance > 920) {
 //       distance = 0;
 //     } else {
 //       distance += 5;
 //     }
-//   }, speed);
-//};
+//   }, 30);
+// };
 
 // var swim3 = function() {
 //   var distance = 920;
@@ -136,7 +89,7 @@ var swim1 = function() {
 // };
 
 
-// reset function to turn bad fish back to fish after they explode
+// // reset function to turn bad fish back to fish after they explode
 // var reset = function() {
 //   $('.badGuys').css('background-image', 'url(assets/badfish.gif');
 // }
@@ -189,10 +142,10 @@ var swim1 = function() {
 //   $showScore.text($score + " points");
 // }
 
-// event listeners
-//wholePage.hover(crossHair);
-start.click(swim1);
-start.click(swim2);
+// // event listeners
+// //wholePage.hover(crossHair);
+// start.click(swim1);
+// start.click(swim2);
 // start.click(swim3);
 // start.click(swim4);
 // start.click(swimfriend);
@@ -207,6 +160,6 @@ start.click(swim2);
 // friend.click(blowup);
 // friend.click(hitfriend);
 // start.click(countDown);
-});
+// });
 
 
