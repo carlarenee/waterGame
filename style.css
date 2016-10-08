@@ -151,3 +151,23 @@ header {
   background-size: 40px 40px;
   background-position: 2% 50%;
 }
+
+#winner {
+  height: 0;
+  width: 0;
+  background-image: url(assets/winner.png);
+  background-size: cover;
+  left: 200px;
+  top: 200px;
+  position: absolute;
+}
+
+#loser {
+  height: 0;
+  width: 0;
+  background-image: url(assets/loser.png);
+  background-size: cover;
+  left: 200px;
+  top: 200px;
+  position: absolute;
+}
