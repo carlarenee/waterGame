@@ -65,7 +65,7 @@ header {
   background-image: url(assets/badfish.gif);
   background-size: cover;
   left: 600px;
-  top: 90px;
+  top: 300px;
   position: absolute;
 }
 
@@ -75,7 +75,7 @@ header {
   border-radius: 50px;
   background-color: pink;
   left: 800px;
-  top: 200px;
+  top: 250px;
   position: absolute;
 }
 
