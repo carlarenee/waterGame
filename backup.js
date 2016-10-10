@@ -3,15 +3,13 @@
 // //getting input from page 1 into page 2
 // var url = window.location.search.substring(1);
 // var retrieve = url.split('&');
-// console.log(retrieve);
 // var name = retrieve[0].split('=');
-// $('#playerName').append(name[1]);
-// console.log(name);
+// $('#playerName').text(name[1]);
 
 // var start = $('#start');
 
-// // Turn cursor into weapon when hovering over a div
-// var wholePage = $('body');
+// //Turn cursor into weapon when hovering over a div
+// var wholePage = $('#box');
 // var crossHair = function () {
 //     wholePage.css( 'cursor' , 'url(assets/pow.png), crossHair');
 //   };
@@ -25,8 +23,7 @@
 // var friend = $('#friend');
 // var badGuy = $('.badGuys');
 
-// // movement functions
-// // monster to swim from right to left
+// // movement functions, set fish swimming from side to side at varying speeds.
 // var swim1 = function() {
 //   var distance = 920;
 //   setInterval(function() {
@@ -38,8 +35,6 @@
 //     }
 //   }, 40);
 // };
-
-// // monster to swim left to right
 // var swim2 = function() {
 //   var distance = 0;
 //   setInterval(function() {
@@ -49,9 +44,8 @@
 //     } else {
 //       distance += 5;
 //     }
-//   }, 30);
+//   }, 40);
 // };
-
 // var swim3 = function() {
 //   var distance = 920;
 //   setInterval(function() {
@@ -63,7 +57,6 @@
 //     }
 //   }, 20);
 // };
-
 // var swim4 = function() {
 //   var distance = 0;
 //   setInterval(function() {
@@ -73,9 +66,8 @@
 //     } else {
 //       distance += 10;
 //     }
-//   }, 15);
+//   }, 25);
 // };
-
 // var swimfriend = function() {
 //   var distance = 0;
 //   setInterval(function() {
@@ -88,31 +80,43 @@
 //   }, 30);
 // };
 
-
 // // reset function to turn bad fish back to fish after they explode
-// var reset = function() {
-//   $('.badGuys').css('background-image', 'url(assets/badfish.gif');
+// var reset1 = function() {
+//   mon1.css('background-image', 'url(assets/badfish.gif');
+// }
+// var reset2 = function() {
+//   mon2.css('background-image', 'url(assets/squid.gif');
+// }
+// var reset3 = function() {
+//   mon3.css('background-image', 'url(assets/orangefish.gif');
+// }
+// var reset4 = function() {
+//   mon4.css('background-image', 'url(assets/greenfish.gif');
+// }
+// var reset5 = function() {
+//   friend.css('background-image', 'url(assets/happyfish.gif');
 // }
 // // explosion animation when bad fish are hit, then reset
-// var blowup = function() {
+// var blowup1 = function() {
 //   $(this).css('background-image', 'url(assets/explode.gif');
-//   setTimeout(reset, 2000);
+//   setTimeout(reset1, 1000);
 // }
-
-// // Timer
-// var $seconds = 20;
-// var $display = $('#playerTime')
-// var countDown = function() {
-//   setInterval(function(){
-//   $seconds--;
-//   if ($seconds < 0) {
-//     clearInterval();
-//     return;
-//   }
-//   $display.text($seconds + " seconds");
-//   }, 1000);
+// var blowup2 = function() {
+//   $(this).css('background-image', 'url(assets/explode.gif');
+//   setTimeout(reset2, 1000);
 // }
-
+// var blowup3 = function() {
+//   $(this).css('background-image', 'url(assets/explode.gif');
+//   setTimeout(reset3, 1000);
+// }
+// var blowup4 = function() {
+//   $(this).css('background-image', 'url(assets/explode.gif');
+//   setTimeout(reset4, 1000);
+// }
+// var blowup5 = function() {
+//   $(this).css('background-image', 'url(assets/explode.gif');
+//   setTimeout(reset5, 1000);
+// }
 // // adding and subtracting points
 // var $showScore = $('#playerScore');
 // var $score = 0;
@@ -142,24 +146,50 @@
 //   $showScore.text($score + " points");
 // }
 
+// // Timer
+// var $seconds = 20;
+// var $display = $('#playerTime');
+// var countDown = function() {
+//   setInterval(function(){
+//   $seconds--;
+//   if ($seconds < 0) {
+//     clearInterval();
+//     if ($score >= 30) {
+//       console.log('winner');
+//       $('#winner').animate({
+//         height: '500px',
+//         width : '500px'
+//       }, 1000);} else {
+//         console.log('loser');
+//         $('#loser').animate({
+//         height: '500px',
+//         width : '500px'
+//       }, 1000);
+//       }
+//     return;
+//     }
+//   $display.text($seconds + " seconds");
+//   }, 1000);
+// }
+
 // // event listeners
-// //wholePage.hover(crossHair);
+// wholePage.hover(crossHair);
+// start.click(countDown);
 // start.click(swim1);
 // start.click(swim2);
 // start.click(swim3);
 // start.click(swim4);
 // start.click(swimfriend);
-// mon1.click(blowup);
+// mon1.click(blowup1);
 // mon1.click(hitMon1);
-// mon2.click(blowup);
+// mon2.click(blowup2);
 // mon2.click(hitMon2);
-// mon3.click(blowup);
+// mon3.click(blowup3);
 // mon3.click(hitMon3);
-// mon4.click(blowup);
+// mon4.click(blowup4);
 // mon4.click(hitMon4);
-// friend.click(blowup);
+// friend.click(blowup5);
 // friend.click(hitfriend);
-// start.click(countDown);
 // });
 
 

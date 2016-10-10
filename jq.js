@@ -33,7 +33,7 @@ var swim1 = function() {
     } else {
       distance -= 5;
     }
-  }, 40);
+  }, 25);
 };
 var swim2 = function() {
   var distance = 0;
@@ -44,7 +44,7 @@ var swim2 = function() {
     } else {
       distance += 5;
     }
-  }, 40);
+  }, 30);
 };
 var swim3 = function() {
   var distance = 920;
@@ -77,7 +77,7 @@ var swimfriend = function() {
     } else {
       distance += 5;
     }
-  }, 30);
+  }, 20);
 };
 
 // reset function to turn bad fish back to fish after they explode
