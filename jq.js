@@ -208,6 +208,24 @@ let countDown = function() {
   $display.text($seconds + " seconds");
   }, 1000);
 }
+// instructions to pop up
+// const instructions = $('#instruct');
+// const popupBox = $('#popup');
+// const popup = function() {
+//   popupBox.animate({
+//         height: '400px',
+//         width : '400px'
+//       }, 1000);}
+// };
+
+// $("button").click(function(){
+//     $("p").toggle();
+// });
+
+$('#instruct').click(function(){
+    $('#popup').toggle();
+});
+
 
 // reset game by reloading page
 let startover = $('#reset');
