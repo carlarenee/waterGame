@@ -13,7 +13,9 @@ I spent the bulk of my time on this project trying to refactor my code. My workf
 3. try to refactor code to act on all elements, not just one at a time. 
 
 For example, I created a random number to use as the fish's swim speed and a for loop to iterate through the fish, but I was only able to get all the fish
-moving at the same random speed, which looked weird, so I reverted back to my lengthy code.
+moving at the same random speed, which looked weird, so I reverted back to my lengthy code. 
+
+I definitely plan on continuing to work on this game to make it cleaner. I had also intended on adding multiple levels but didn't get there in time.
 
 
 ![alt tag](./assets/watergame.png)
