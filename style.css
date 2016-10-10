@@ -52,7 +52,7 @@ header {
 #monster3 {
   height: 200px;
   width: 200px;
-  background-image: url(assets/badfish.gif);
+  background-image: url(assets/orangefish.gif);
   background-size: cover;
   left: 400px;
   top: 400px;
@@ -62,7 +62,7 @@ header {
 #monster4 {
   height: 200px;
   width: 200px;
-  background-image: url(assets/badfish.gif);
+  background-image: url(assets/greenfish.gif);
   background-size: cover;
   left: 600px;
   top: 300px;
@@ -70,10 +70,10 @@ header {
 }
 
 #friend {
-  height: 100px;
-  width: 100px;
-  border-radius: 50px;
-  background-color: pink;
+  height: 200px;
+  width: 200px;
+  background-image: url(assets/happyfish.gif);
+  background-size: cover;
   left: 800px;
   top: 250px;
   position: absolute;
@@ -97,6 +97,7 @@ header {
   display: inline-block;
   flex-wrap: wrap;
   font-size: 3em;
+  word-wrap: break-word;
 }
 
 #page1main {

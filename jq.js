@@ -4,18 +4,17 @@ $(document).ready(function() {
 var url = window.location.search.substring(1);
 var retrieve = url.split('&');
 var name = retrieve[0].split('=');
-$('#playerName').append(name[1]);
+$('#playerName').text(name[1]);
 
 var start = $('#start');
 
-// Turn cursor into weapon when hovering over a div
-// var wholePage = $('body');
-// var crossHair = function () {
-//     wholePage.css( 'cursor' , 'url(assets/pow.png), crossHair');
-//   };
+//Turn cursor into weapon when hovering over a div
+var wholePage = $('#box');
+var crossHair = function () {
+    wholePage.css( 'cursor' , 'url(assets/pow.png), crossHair');
+  };
 
 // variables
-
 var score = 0;
 var mon1 = $('#monster1');
 var mon2 = $('#monster2');
@@ -67,7 +66,7 @@ var swim4 = function() {
     } else {
       distance += 10;
     }
-  }, 15);
+  }, 25);
 };
 var swimfriend = function() {
   var distance = 0;
@@ -89,7 +88,10 @@ var reset2 = function() {
   mon2.css('background-image', 'url(assets/squid.gif');
 }
 var reset3 = function() {
-  mon3.css('background-image', 'url(assets/squid.gif');
+  mon3.css('background-image', 'url(assets/orangefish.gif');
+}
+var reset4 = function() {
+  mon4.css('background-image', 'url(assets/greenfish.gif');
 }
 // explosion animation when bad fish are hit, then reset
 var blowup1 = function() {
@@ -104,8 +106,10 @@ var blowup3 = function() {
   $(this).css('background-image', 'url(assets/explode.gif');
   setTimeout(reset3, 1000);
 }
-
-
+var blowup4 = function() {
+  $(this).css('background-image', 'url(assets/explode.gif');
+  setTimeout(reset4, 1000);
+}
 // adding and subtracting points
 var $showScore = $('#playerScore');
 var $score = 0;
@@ -162,7 +166,7 @@ var countDown = function() {
 }
 
 // event listeners
-//wholePage.hover(crossHair);
+wholePage.hover(crossHair);
 start.click(countDown);
 start.click(swim1);
 start.click(swim2);
@@ -175,7 +179,7 @@ mon2.click(blowup2);
 mon2.click(hitMon2);
 mon3.click(blowup3);
 mon3.click(hitMon3);
-mon4.click(blowup);
+mon4.click(blowup4);
 mon4.click(hitMon4);
 friend.click(blowup);
 friend.click(hitfriend);
