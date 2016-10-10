@@ -22,33 +22,39 @@
 // var mon4 = $('#monster4');
 // var friend = $('#friend');
 // var badGuy = $('.badGuys');
+// var myInt;
+// var myInt2;
+// var myInt3;
+// var myInt4;
+// var myInt5;
+
 
 // // movement functions, set fish swimming from side to side at varying speeds.
 // var swim1 = function() {
 //   var distance = 920;
-//   setInterval(function() {
+//   myInt = setInterval(function() {
 //     mon1.css('left', distance + 'px');
 //     if (distance < 0) {
 //       distance = 920;
 //     } else {
 //       distance -= 5;
 //     }
-//   }, 40);
+//   }, 25);
 // };
 // var swim2 = function() {
 //   var distance = 0;
-//   setInterval(function() {
+//   myInt2 = setInterval(function() {
 //     mon2.css('left', distance + 'px');
 //     if (distance > 920) {
 //       distance = 0;
 //     } else {
 //       distance += 5;
 //     }
-//   }, 40);
+//   }, 30);
 // };
 // var swim3 = function() {
 //   var distance = 920;
-//   setInterval(function() {
+//   myInt3 = setInterval(function() {
 //     mon3.css('left', distance + 'px');
 //     if (distance < 0) {
 //       distance = 920;
@@ -59,7 +65,7 @@
 // };
 // var swim4 = function() {
 //   var distance = 0;
-//   setInterval(function() {
+//   myInt4 = setInterval(function() {
 //     mon4.css('left', distance + 'px');
 //     if (distance > 920) {
 //       distance = 0;
@@ -70,14 +76,14 @@
 // };
 // var swimfriend = function() {
 //   var distance = 0;
-//   setInterval(function() {
+//   myInt5 = setInterval(function() {
 //     friend.css('left', distance + 'px');
 //     if (distance > 920) {
 //       distance = 0;
 //     } else {
 //       distance += 5;
 //     }
-//   }, 30);
+//   }, 20);
 // };
 
 // // reset function to turn bad fish back to fish after they explode
@@ -147,7 +153,7 @@
 // }
 
 // // Timer
-// var $seconds = 20;
+// var $seconds = 3;
 // var $display = $('#playerTime');
 // var countDown = function() {
 //   setInterval(function(){
@@ -165,12 +171,26 @@
 //         height: '500px',
 //         width : '500px'
 //       }, 1000);
+//         if ($seconds < 1) {
+//           clearInterval(myInt);
+//           clearInterval(myInt2);
+//           clearInterval(myInt3);
+//           clearInterval(myInt4);
+//           clearInterval(myInt5);
+//         };
 //       }
 //     return;
 //     }
 //   $display.text($seconds + " seconds");
 //   }, 1000);
 // }
+
+// // reset game by reloading page
+// var startover = $('#reset');
+// var reload = function() {
+//     location.reload();
+//     console.log('resetting');
+// };
 
 // // event listeners
 // wholePage.hover(crossHair);
@@ -190,6 +210,7 @@
 // mon4.click(hitMon4);
 // friend.click(blowup5);
 // friend.click(hitfriend);
+// startover.click(reload);
 // });
 
 
