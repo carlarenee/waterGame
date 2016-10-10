@@ -44,7 +44,7 @@ var swim2 = function() {
     } else {
       distance += 5;
     }
-  }, 30);
+  }, 40);
 };
 var swim3 = function() {
   var distance = 920;
@@ -93,6 +93,9 @@ var reset3 = function() {
 var reset4 = function() {
   mon4.css('background-image', 'url(assets/greenfish.gif');
 }
+var reset5 = function() {
+  friend.css('background-image', 'url(assets/happyfish.gif');
+}
 // explosion animation when bad fish are hit, then reset
 var blowup1 = function() {
   $(this).css('background-image', 'url(assets/explode.gif');
@@ -109,6 +112,10 @@ var blowup3 = function() {
 var blowup4 = function() {
   $(this).css('background-image', 'url(assets/explode.gif');
   setTimeout(reset4, 1000);
+}
+var blowup5 = function() {
+  $(this).css('background-image', 'url(assets/explode.gif');
+  setTimeout(reset5, 1000);
 }
 // adding and subtracting points
 var $showScore = $('#playerScore');
@@ -181,7 +188,7 @@ mon3.click(blowup3);
 mon3.click(hitMon3);
 mon4.click(blowup4);
 mon4.click(hitMon4);
-friend.click(blowup);
+friend.click(blowup5);
 friend.click(hitfriend);
 });
 

@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 6em;
+  letter-spacing: 12px;
+  display: inline-block;
+  float: right;
+  margin: 0;
+  text-align: center;
+  padding-right: 15px;
+  margin-top: -20px;
+}
+
+h4 {
+  font-family: 'Abel', sans-serif;
+  color: white;
+  letter-spacing: 30px;
+  display: inline-block;
+  float: right;
+  padding-right: -5px;
+  margin: 0;
+  margin-top: -25px;
+}
+
+h2 {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  font-size: 3em;
+  font-weight: 100;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+#logoblock{
+  height: 300px;
+  width: 600px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#page1main {
+  background-image: url(assets/landingbg.png);
+  width: 100%;
+  height: 1200px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  color: black;
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 10px;
+  padding-left: 80px;
+}
+
+#input1 {
+  background-image: url(assets/name.png);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position: 2% 50%;
+}
+
+#input2 {
+  background-image: url(assets/email.png);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position: 2% 50%;
+}
+
+#input3 {
+  background-image: url(assets/phone.png);
+  background-repeat: no-repeat;
+  background-size: 40px 40px;
+  background-position: 2% 50%;
+}
+
+#submitbtn {
+  background-color: #71B522;
+  color: white;
+  width: 280px;
+  height: 80px;
+  border-radius: 20px;
+  margin: 20px 0 0 80px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
