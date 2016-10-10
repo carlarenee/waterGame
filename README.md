@@ -1,7 +1,4 @@
 # waterGame
-A readme.md file with explanations of the technologies used, wireframes the approach taken, installation instructions, 
-unsolved problems, etc.
-
 Monster Fish was created using HTML, CSS and jQuery:
 The fish are represented with a .Gif set as a background image on divs. I used Flexbox to center the boardgame and space the user score, timer and name.
 I used CSS to style the pages.
@@ -19,5 +16,5 @@ For example, I created a random number to use as the fish's swim speed and a for
 moving at the same random speed, which looked weird, so I reverted back to my lengthy code.
 
 
-![alt tag](./assets/watergame)
+![alt tag](./assets/watergame.png)
 
