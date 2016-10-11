@@ -51,7 +51,7 @@ let swim2 = function() {
     } else {
       distance += 5;
     }
-  }, 30);
+  }, 15);
 };
 let swim3 = function() {
   let distance = 920;
@@ -62,7 +62,7 @@ let swim3 = function() {
     } else {
       distance -= 5;
     }
-  }, 20);
+  }, 10);
 };
 let swim4 = function() {
   let distance = 0;
@@ -73,7 +73,7 @@ let swim4 = function() {
     } else {
       distance += 10;
     }
-  }, 25);
+  }, 20);
 };
 let swimfriend = function() {
   let distance = 0;
@@ -188,7 +188,16 @@ let countDown = function() {
       $('#winner').animate({
         height: '500px',
         width : '500px'
-      }, 1000);} else {
+      }, 1000);
+        if ($seconds < 1) {
+          clearInterval(myInt);
+          clearInterval(myInt2);
+          clearInterval(myInt3);
+          clearInterval(myInt4);
+          clearInterval(myInt5);
+          clearInterval(myInt6);
+        };
+    } else {
         console.log('loser');
         $('#loser').animate({
         height: '500px',
