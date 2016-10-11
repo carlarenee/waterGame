@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-//getting input from page 1 into page 2
+// Getting input from page 1 into page 2. For this logic, I referred
+//back to our first group project.
+// Sam was the one who figured out the 'window.location..."
 const url = window.location.search.substring(1);
 const retrieve = url.split('&');
 const name = retrieve[0].split('=');
@@ -8,7 +10,8 @@ $('#playerName').text(name[1]);
 
 const start = $('#start');
 
-//Turn cursor into weapon when hovering over a div
+//Turn cursor into weapon when hovering over a div. I googled how to do
+// this and found some examples on W3schools.
 const wholePage = $('#box');
 const crossHair = function () {
     wholePage.css( 'cursor' , 'url(assets/pow.png), crossHair');
@@ -30,7 +33,9 @@ let myInt4;
 let myInt5;
 let myInt6;
 
-// movement functions, set fish swimming from side to side at varying speeds.
+// movement functions, set fish swimming from side to side at varying
+// speeds. I referred back to the dancing
+// pony exercise we did in class last week.
 let swim1 = function() {
   let distance = 920;
   myInt = setInterval(function() {
@@ -175,7 +180,8 @@ let hitfriend2 = function() {
   $showScore.text($score + " points");
 }
 
-// Timer
+// Timer, when timer runs out, this also checks score and displays a
+// winning or losing message.
 let $seconds = 20;
 let $display = $('#playerTime');
 let countDown = function() {
@@ -218,12 +224,14 @@ let countDown = function() {
   }, 1000);
 }
 
-// instruction pop up
+// instruction pop up. I googled solutions for this and found the
+// .toggle method on w3schools
 $('#instruct').click(function(){
     $('#popup').toggle();
 });
 
-// reset game by reloading page
+// reset game by reloading page. I also googled to see if this was
+// possible and found the location.reload method on w3schools.
 let startover = $('#reset');
 let reload = function() {
     location.reload();
